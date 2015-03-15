@@ -5,5 +5,6 @@ Longest common subsequence implementation in Go
 
 """
 $ ./go-lcs abc xyzabc
-3
+Longest sequence: abc
+Length: 3
 """
