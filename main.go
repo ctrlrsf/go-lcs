@@ -26,8 +26,8 @@ func main() {
 	str1, str2 = os.Args[1], os.Args[2]
 
 	length, sequence := LCS([]rune(str1), []rune(str2))
+	fmt.Printf("Longest sequence: %s\n", string(sequence))
 	fmt.Printf("Length: %d\n", length)
-	fmt.Printf("Sequence: %s\n", string(sequence))
 }
 
 // LCS returns the length and the longest common subsequence of two rune arrays
