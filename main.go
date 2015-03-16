@@ -15,15 +15,11 @@ func usage() {
 	os.Exit(1)
 }
 
-var str1, str2 string
-var matrix [][]int
-var matrixSeq [][][]rune
-
 func main() {
 	if len(os.Args[1:]) < 2 {
 		usage()
 	}
-	str1, str2 = os.Args[1], os.Args[2]
+	str1, str2 := os.Args[1], os.Args[2]
 
 	length, sequence := LCS([]rune(str1), []rune(str2))
 	fmt.Printf("Longest sequence: %s\n", string(sequence))
@@ -33,6 +29,9 @@ func main() {
 // LCS returns the length and the longest common subsequence of two rune arrays
 // http://en.wikipedia.org/wiki/Longest_common_subsequence_problem
 func LCS(str1, str2 []rune) (int, []rune) {
+	var matrix [][]int
+	var matrixSeq [][][]rune
+
 	str1Len := len(str1)
 	str2Len := len(str2)
 
