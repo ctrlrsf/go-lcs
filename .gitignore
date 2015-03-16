@@ -24,4 +24,4 @@ _testmain.go
 *.prof
 
 # Ignore binary
-go-lcs
+go-lcs/go-lcs

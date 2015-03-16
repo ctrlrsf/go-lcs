@@ -1,30 +1,6 @@
-package main
+package lcs
 
-import (
-	"fmt"
-	"math"
-	"os"
-)
-
-func printSize(s string) {
-	fmt.Printf("\"%v\" length = %d\n", s, len(s))
-}
-
-func usage() {
-	fmt.Printf("Usage: %s string1 string2", os.Args[0])
-	os.Exit(1)
-}
-
-func main() {
-	if len(os.Args[1:]) < 2 {
-		usage()
-	}
-	str1, str2 := os.Args[1], os.Args[2]
-
-	length, sequence := LCS([]rune(str1), []rune(str2))
-	fmt.Printf("Longest sequence: %s\n", string(sequence))
-	fmt.Printf("Length: %d\n", length)
-}
+import "math"
 
 // LCS returns the length and the longest common subsequence of two rune arrays
 // http://en.wikipedia.org/wiki/Longest_common_subsequence_problem
